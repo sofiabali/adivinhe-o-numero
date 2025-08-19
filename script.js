@@ -1,12 +1,7 @@
-// Projeto Adivinhe o Número - Claudete de Oliveira Alves e [Nome do(a) parceiro(a)]
-
-// Variáveis principais
 let numeroSecreto;
 let tentativasMaximas = 10;
 let tentativasRestantes;
 let palpites = [];
-
-// Elementos do DOM
 const inputPalpite = document.getElementById("palpite");
 const btnEnviar = document.getElementById("btnEnviar");
 const btnReiniciar = document.getElementById("btnReiniciar");
@@ -14,9 +9,9 @@ const mensagem = document.getElementById("mensagem");
 const tentativasTexto = document.getElementById("tentativas");
 const historicoTexto = document.getElementById("historico");
 
-// Função para iniciar ou reiniciar o jogo
+
 function iniciarJogo() {
-    numeroSecreto = Math.floor(Math.random() * 100) + 1;
+    numeroSecreto = Math.floor(Math.random() * 20) + 1;
     tentativasRestantes = tentativasMaximas;
     palpites = [];
 
@@ -28,15 +23,14 @@ function iniciarJogo() {
     btnEnviar.disabled = false;
     btnReiniciar.classList.add("hidden");
 
-    console.log("Número secreto (debug):", numeroSecreto); // Para testes no console
+    console.log("Número secreto (debug):", numeroSecreto); 
 }
 
-// Função para verificar o palpite do usuário
 function verificarPalpite() {
     const palpite = Number(inputPalpite.value);
 
-    if (!palpite || palpite < 1 || palpite > 100) {
-        mensagem.textContent = "⚠️ Digite um número válido entre 1 e 100!";
+    if (!palpite || palpite < 1 || palpite > 20) {
+        mensagem.textContent = "⚠️ Digite um número válido entre 1 e 20!";
         return;
     }
 
@@ -44,10 +38,10 @@ function verificarPalpite() {
     tentativasRestantes--;
 
     if (palpite === numeroSecreto) {
-        mensagem.textContent = `🎉 Parabéns! Você acertou o número ${numeroSecreto}!`;
+        mensagem.textContent = ` Parabéns! Você acertou o número ${numeroSecreto}!`;
         fimDeJogo();
     } else if (tentativasRestantes === 0) {
-        mensagem.textContent = `❌ Suas tentativas acabaram! O número era ${numeroSecreto}.`;
+        mensagem.textContent = ` Suas tentativas acabaram! O número era ${numeroSecreto}.`;
         fimDeJogo();
     } else {
         if (palpite < numeroSecreto) {
@@ -62,16 +56,15 @@ function verificarPalpite() {
     inputPalpite.value = "";
 }
 
-// Função para encerrar o jogo
 function fimDeJogo() {
     inputPalpite.disabled = true;
     btnEnviar.disabled = true;
     btnReiniciar.classList.remove("hidden");
 }
 
-// Eventos
+
 btnEnviar.addEventListener("click", verificarPalpite);
 btnReiniciar.addEventListener("click", iniciarJogo);
 
-// Iniciar ao carregar a página
+
 iniciarJogo();
