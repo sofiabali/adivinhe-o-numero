@@ -1,9 +1,7 @@
-/* Projeto Adivinhe o Número - Claudete de Oliveira Alves e [Nome do(a) parceiro(a)] */
-
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #4facfe, #00f2fe);
-    color: #333;
+    background: linear-gradient(120deg, #D9B6A3, #A6806A);
+    color: #ffffff;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -14,21 +12,21 @@ body {
 }
 
 .container {
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    background: #A6806A;
+    padding: 200px;
+    border-radius: 25px;
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
     max-width: 500px;
     width: 90%;
 }
 
 h1 {
-    margin-bottom: 10px;
-    color: #222;
+    margin-bottom: 20px;
+    color: #400106;
 }
 
 .game-area {
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 input[type="number"] {
@@ -41,7 +39,7 @@ input[type="number"] {
 }
 
 button {
-    padding: 10px 15px;
+    padding: 30px 25px;
     font-size: 16px;
     border: none;
     border-radius: 8px;
@@ -73,6 +71,6 @@ button {
 }
 
 .info p {
-    font-size: 16px;
+    font-size: 25px;
     margin: 8px 0;
 }
