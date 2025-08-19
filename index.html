@@ -1,0 +1,31 @@
+
+<!-- Projeto Adivinhe o Número - Claudete de Oliveira Alves e [Nome do(a) parceiro(a)] -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhe o Número</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎲 Jogo: Adivinhe o Número</h1>
+        <p>O computador escolheu um número secreto entre <strong>1 e 100</strong>. Será que você consegue descobrir?</p>
+
+        <div class="game-area">
+            <input type="number" id="palpite" placeholder="Digite seu palpite" min="1" max="100">
+            <button id="btnEnviar">Enviar Palpite</button>
+            <button id="btnReiniciar" class="hidden">Jogar Novamente</button>
+        </div>
+
+        <div class="info">
+            <p id="mensagem"></p>
+            <p id="tentativas"></p>
+            <p id="historico"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
